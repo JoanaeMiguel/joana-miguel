@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joana & Miguel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #DFE0E1;
+            color: #2b2b2b;
+            line-height: 1.5;
+        }
+
+        /* Header */
+        header {
+            padding: 16px 24px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e0da;
+        }
+
+        header .logo {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 16px;
+            color: #ffffff;
+            background-image: url("your-background-photo.jpg"); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Dark overlay for readability */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.65)
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 600px;
+        }
+
+        .hero-top-text {
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 16px;
+        }
+
+        .hero-names {
+            font-weight: 700;
+            font-size: 42px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero-date {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+
+        /* Main Content */
+        main {
+            padding: 48px 16px 56px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2b2b2b;
+        }
+
+        .section-image {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .section-time {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        .section-text-center {
+            text-align: center;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .section-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .section-link a {
+            font-weight: 600;
+            text-decoration: none;
+            color: #333333;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 2px;
+        }
+
+        .section-link a:hover {
+            opacity: 0.8;
+        }
+
+        @media (min-width: 768px) {
+            .hero-names {
+                font-size: 56px;
+            }
+
+            .hero-top-text,
+            .hero-date {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Joana &amp; Miguel</div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-top-text">We Are Getting Married!</div>
+        <div class="hero-names">Joana &amp; Miguel</div>
+        <div class="hero-date">16.05.26</div>
+    </div>
+</section>
+
+<main>
+    <section>
+        <h2 class="section-title">Cerimonia</h2>
+
+        <!-- Replace with your actual ceremony image -->
+        <img src="cerimonia-photo.jpg" alt="Cerimonia" class="section-image">
+
+        <div class="section-time">14h00</div>
+
+        <p class="section-text-center">Igreja de Sao Francisco</p>
+        <p class="section-text-center">Largo de Sao Francisco</p>
+
+        <div class="section-link">
+            <a href="https://www.test.pt" target="_blank">Mapa</a>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
