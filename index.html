@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Joana & Miguel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    
     <style>
         * {
             box-sizing: border-box;
@@ -37,7 +39,7 @@
             position: relative;
             min-height: 75vh;
             display: flex;
-            justify-content: center; /* Changed to center for better vertical alignment */
+            justify-content: center;
             align-items: center;
             text-align: center;
             padding: 80px 16px 40px;
@@ -47,7 +49,6 @@
             background-position: center;
         }
 
-        /* Dark overlay for readability */
         .hero::before {
             content: "";
             position: absolute;
@@ -73,7 +74,7 @@
             margin-bottom: 16px;
         }
 
-        /* CHANGED: This now stacks the names vertically */
+        /* Stacks the names vertically */
         .hero-names {
             display: flex;
             flex-direction: column;
@@ -83,7 +84,17 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             margin-bottom: 10px;
-            line-height: 1.2;
+            line-height: 1; /* Tightens the vertical space */
+        }
+
+        /* Custom styling for the ampersand */
+        .ampersand {
+            font-family: 'Great Vibes', cursive; /* Elegant script font */
+            font-size: 32px;                     /* Made it smaller than the names */
+            text-transform: none;               /* Keep it lowercase/natural */
+            letter-spacing: 0;
+            margin: 5px 0;                      /* Space above/below */
+            color: rgba(255, 255, 255, 0.9);    /* Slightly softer white */
         }
 
         .hero-date {
@@ -91,7 +102,7 @@
             font-size: 18px;
             letter-spacing: 0.25em;
             text-transform: uppercase;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         /* Main Content */
@@ -221,6 +232,10 @@
                 font-size: 56px;
             }
 
+            .ampersand {
+                font-size: 40px; /* Scales up slightly on desktop */
+            }
+
             .hero-top-text,
             .hero-date {
                 font-size: 20px;
@@ -247,7 +262,7 @@
         <div class="hero-top-text">We Are Getting Married!</div>
         <div class="hero-names">
             <span>Joana</span>
-            <span>&amp;</span>
+            <span class="ampersand">&amp;</span>
             <span>Miguel</span>
         </div>
         <div class="hero-date">16.05.26</div>
