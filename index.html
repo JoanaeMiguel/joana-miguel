@@ -37,12 +37,12 @@
             position: relative;
             min-height: 75vh;
             display: flex;
-            justify-content: flex-start; /* top */
+            justify-content: center; /* Changed to center for better vertical alignment */
             align-items: center;
             text-align: center;
-            padding: 80px 16px 40px; /* space from top */
+            padding: 80px 16px 40px;
             color: #ffffff;
-            background-image: url("WhatsApp Image 2026-02-17 at 18.09.34.jpeg"); /* Replace with your image */
+            background-image: url("WhatsApp Image 2026-02-17 at 18.09.34.jpeg"); 
             background-size: cover;
             background-position: center;
         }
@@ -73,12 +73,17 @@
             margin-bottom: 16px;
         }
 
+        /* CHANGED: This now stacks the names vertically */
         .hero-names {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-weight: 700;
             font-size: 42px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             margin-bottom: 10px;
+            line-height: 1.2;
         }
 
         .hero-date {
@@ -86,6 +91,7 @@
             font-size: 18px;
             letter-spacing: 0.25em;
             text-transform: uppercase;
+            margin-top: 10px;
         }
 
         /* Main Content */
@@ -100,11 +106,11 @@
         }
 
         .section-title {
-            font-size: 40px;       /* bigger */
+            font-size: 40px;
             font-weight: 700;
             margin-bottom: 20px;
             color: #2b2b2b;
-            text-align: center;    /* centered */
+            text-align: center;
         }
 
         .section-image {
@@ -115,11 +121,11 @@
         }
 
         .section-time {
-            font-size: 26px;       /* bigger */
+            font-size: 26px;
             font-weight: 600;
             margin-bottom: 10px;
             color: #333333;
-            text-align: center;    /* centered */
+            text-align: center;
         }
 
         .section-text-center {
@@ -145,7 +151,6 @@
             opacity: 0.8;
         }
 
-        /* RSVP / Call-to-action section */
         .section-text-large {
             text-align: center;
             font-size: 22px;
@@ -162,8 +167,8 @@
         .primary-button {
             display: inline-block;
             padding: 12px 26px;
-            border-radius: 999px;           /* round edges */
-            background-color: #2b2b2b;      /* dark button */
+            border-radius: 999px;
+            background-color: #2b2b2b;
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
@@ -174,26 +179,25 @@
             opacity: 0.9;
         }
 
-        /* Ending / Contact section */
         .ending-section {
             position: relative;
             min-height: 50vh;
             padding: 60px 16px;
-            background-image: url("Intricate Black-And-White Line Drawing Of A Grand Mansion.png"); /* Replace with your ending image */
+            background-image: url("Intricate Black-And-White Line Drawing Of A Grand Mansion.png");
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #2b2b2b; /* dark text */
+            color: #2b2b2b;
         }
 
         .ending-section::before {
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(255, 255, 255, 0.7); /* light overlay so dark text is readable */
+            background: rgba(255, 255, 255, 0.7);
         }
 
         .ending-content {
@@ -238,56 +242,43 @@
     <div class="logo">Joana &amp; Miguel</div>
 </header>
 
-<!-- Hero / Top Image -->
 <section class="hero">
     <div class="hero-content">
         <div class="hero-top-text">We Are Getting Married!</div>
-        <div class="hero-names">Joana &amp; Miguel</div>
+        <div class="hero-names">
+            <span>Joana</span>
+            <span>&amp;</span>
+            <span>Miguel</span>
+        </div>
         <div class="hero-date">16.05.26</div>
     </div>
 </section>
-<!-- Hero / Top Image -->
-    
+
 <main>
-    <!-- Cerimonia Section -->
     <section>
         <h2 class="section-title">Cerimónia</h2>
-
-        <!-- Replace with your actual ceremony image -->
         <img src="1.jpg" alt="Cerimonia" class="section-image">
-
         <div class="section-time">14h00</div>
-
         <p class="section-text-center">Igreja de São Francisco</p>
         <p class="section-text-center">Largo de São Francisco, Guimarães</p>
-
         <div class="section-link">
             <a href="https://share.google/aiXSu8hQ7JdfF1UPQ" target="_blank" rel="noopener noreferrer">Mapa</a>
         </div>
     </section>
 
-    <!-- Copo de Agua Section -->
     <section>
         <h2 class="section-title">Copo de Água</h2>
-
-        <!-- Replace with your copo de água image -->
         <img src="WhatsApp Image 2026-02-28 at 16.04.46.jpeg" alt="Copo de Agua" class="section-image">
-
         <p class="section-text-center">Palácio da Igreja Velha</p>
         <p class="section-text-center">Avenida do Palácio, Vermoim</p>
-
         <div class="section-link">
             <a href="https://share.google/sNgdQdvObYZepmEQO" target="_blank" rel="noopener noreferrer">Mapa</a>
         </div>
     </section>
 
-    <!-- RSVP / Confirmation Section -->
     <section>
-        <!-- New picture for this section -->
         <img src="WhatsApp Image 2026-02-17 at 18.09.03.jpeg" alt="Esperamos contar contigo" class="section-image">
-
         <p class="section-text-large">Contamos contigo!</p>
-
         <div class="button-wrapper">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScXUrKV8aBfbfejGw0a9C1HcWfjzIdbn6UqfKt8mZDrF3MsEw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="primary-button">
                 Confirma a tua presença
@@ -296,7 +287,6 @@
     </section>
 </main>
 
-<!-- Ending / Contact Section -->
 <section class="ending-section">
     <div class="ending-content">
         <div class="ending-title">Contactos</div>
